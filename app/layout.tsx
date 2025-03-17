@@ -13,10 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Black Palm Bakery",
+  title: {
+    template: "%s | The Black Palm Bakery",
+    default: "The Black Palm Bakery",
+  },
   description: "The Black Palm Bakery. Crafting custom pastries for your special day.",
   keywords: "Louisville, Bakery, Custom, Pastries, Wedding, Birthday, Cakes, Cupcakes, Cookies, Brownies, Black Palm Bakery",
-  
 };
 
 export default function RootLayout({

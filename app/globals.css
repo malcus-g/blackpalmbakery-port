@@ -2,24 +2,21 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: Nimbus;
+    font-family: "Nimbus";
     src: url("../public/fonts/TAN-NIMBUS.ttf");
 }
 
 @font-face {
-    font-family: Dream Avenue;
+    font-family: "Dream Avenue";
     src: url("../public/fonts/dream-avenue.ttf");
 }
 
-@theme {
+:root {
     --font-nixie: Nixie One;
     --font-nimbus: Nimbus;
     --font-dream: Dream Avenue;
     --font-weight: 400;
     --font-style: normal;
-}
-
-:root {
 
     body {
         font-family: var(--font-nixie);

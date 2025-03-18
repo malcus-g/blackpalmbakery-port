@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local"
 import { Nixie_One } from "next/font/google";
 import "./globals.css";
+import Container from "@/ui/container";
 
 const nimbus = localFont({
   src: "../public/fonts/TAN-NIMBUS.ttf"
@@ -35,9 +36,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nixieOne.variable} ${nimbus.className} ${dreamAvenue.className} antialiased`}
+        className={`${nixieOne.variable} ${nimbus.className} ${dreamAvenue.className} antialiased bg-[url(../public/images/bgLight.png)] bg-cover bg-no-repeat`}
       >
-        {children}
+        <main className="flex justify-center min-h-dvh">
+          <Container>
+            {children}
+          </Container>
+        </main>
       </body>
     </html>
   );

@@ -3,37 +3,42 @@
 
 @font-face {
     font-family: Nimbus;
-    src: url("../public/fonts/TAN-NIMBUS.ttf") format("ttf");
+    src: url("../public/fonts/TAN-NIMBUS.ttf");
 }
 
 @font-face {
     font-family: Dream Avenue;
-    src: url("../public/fonts/dream-avenue.ttf") format("ttf");
+    src: url("../public/fonts/dream-avenue.ttf");
 }
 
 @theme {
-    --font-nixie: "Nixie One", system-ui;
-    --font-nimbus: "Nimbus", system-ui;
-    --font-dream: "Dream Avenue" system-ui;
+    --font-nixie: Nixie One;
+    --font-nimbus: Nimbus;
+    --font-dream: Dream Avenue;
     --font-weight: 400;
     --font-style: normal;
 }
 
-@layer base {
+:root {
 
     body {
         font-family: var(--font-nixie);
-    }
-    
-    h1 {
-        font-family: var(--font-nimbus);
-    }
-
-    h2 {
-        font-family: var(--font-dream);
+        font-size: 16px;
     }
 
     input, button, textarea, select {
         font: inherit;
+    }
+}
+
+@layer base {
+    h1 {
+        font-family: var(--font-nimbus);
+        font-size: 5em;
+    }
+
+    h2 {
+        font-family: var(--font-dream);
+        font-size: 4em;
     }
 }

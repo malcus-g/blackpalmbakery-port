@@ -1,8 +1,11 @@
-// This file contains type definitions for your data.
+// This file contains type definitions for the data.
 // It describes the shape of the data, and what data type each property should accept.
+import { navLinks } from "./data"
+
+// SECTION TYPES
+export type SectionName = typeof navLinks[number]["name"];
 
 // MENU TYPES
-
 export type Menu = {
     categories: [Category],
 }

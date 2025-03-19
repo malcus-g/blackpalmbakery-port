@@ -17,6 +17,7 @@
     --font-dream: Dream Avenue;
     --font-weight: 400;
     --font-style: normal;
+    --font-color-light: oklch(0.21 0.034 264.665);
 
     body {
         font-family: var(--font-nixie);

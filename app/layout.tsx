@@ -5,6 +5,7 @@ import "./globals.css";
 import Container from "@/ui/container";
 import Header from "@/ui/header";
 import ActiveSectionContextProvider from "@/context/active-section-context";
+import Footer from "@/ui/footer";
 
 const nimbus = localFont({
   src: "../public/fonts/TAN-NIMBUS.ttf"
@@ -45,6 +46,7 @@ export default function RootLayout({
           <Container>
             {children}
           </Container>
+          <Footer />
         </ActiveSectionContextProvider>
       </body>
     </html>

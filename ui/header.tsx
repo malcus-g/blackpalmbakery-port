@@ -38,9 +38,9 @@ export default function Header() {
                 </Link>
             </motion.div>
             <nav 
-                className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[.75rem] sm:h-[initial] sm:py-0">
+                className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-[48%] py-2 sm:top-[.75rem] sm:h-[initial] sm:py-0">
                 <ul 
-                    className="flex flex-wrap w-[22rem] items-center justify-center gap-y-1 font-bold text-gray-600 text-[.9rem] sm:text-[1.2rem] sm:w-[initial] sm:gap-10 sm:flex-nowrap">
+                    className="flex flex-wrap w-[22rem] items-center justify-center gap-y-1 font-bold text-gray-600 text-[.9rem] sm:text-[1.1rem] sm:w-[initial] sm:gap-8 sm:flex-nowrap">
                     {
                         navLinks.map((link) => (
                             <motion.li 

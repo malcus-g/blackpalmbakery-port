@@ -3,6 +3,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SubmitBtn from '@/ui/contact/submit-btn';
+import toast from 'react-hot-toast';
+import { sendEmail } from '@/actions/sendEmail';
 
 export default function ContactForm() {
   return (
@@ -11,6 +13,14 @@ export default function ContactForm() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
+        action={async (formData) => {
+          const { error } = await sendEmail(formData);
+          if(error) {
+              toast.error(error);
+              return;
+          }
+          toast.success("Email successfully sent!");
+      }}
     >
         <div className="flex flex-col gap-10 mb-16">
           <p>

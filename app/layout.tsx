@@ -6,6 +6,7 @@ import Container from "@/ui/container";
 import Header from "@/ui/header";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/ui/footer";
+import { Toaster } from "react-hot-toast";
 
 const nimbus = localFont({
   src: "../public/fonts/TAN-NIMBUS.ttf"
@@ -39,12 +40,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nixieOne.variable} ${nimbus.className} ${dreamAvenue.className} antialiased relative bg-[url(../public/images/bgLight.png)] bg-cover bg-no-repeat pt-28 sm:pt-36`}
+        className={`${nixieOne.variable} ${nimbus.className} ${dreamAvenue.className} antialiased relative bg-[url(../public/images/bgLight.png)] bg-contain pt-28 sm:pt-36`}
       >
         <ActiveSectionContextProvider>
           <Header />
           <Container>
             {children}
+            <Toaster position="bottom-center" />
           </Container>
           <Footer />
         </ActiveSectionContextProvider>

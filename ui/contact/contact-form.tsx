@@ -35,7 +35,7 @@ export default function ContactForm() {
           <div className="flex flex-row gap-4">
             <input
                 type="radio"
-                name="prevCustomer"
+                name="customerType"
                 value="new"
                 required
                 className="h-6 w-6"
@@ -45,17 +45,17 @@ export default function ContactForm() {
           <div className="flex flex-row gap-4">
             <input
                 type="radio"
-                name="prevCustomer"
+                name="customerType"
                 value="existing"
                 required
                 className="h-6 w-6"
             />
-            <label htmlFor="new">I am an existing customer</label>
+            <label htmlFor="existing">I am an existing customer</label>
           </div>
         </fieldset>
         <input
             type="text"
-            name="name"
+            name="senderName"
             placeholder="Your Name"
             required
             maxLength={100}
@@ -63,7 +63,7 @@ export default function ContactForm() {
         />
         <input
             type="tel"
-            name="phone"
+            name="senderPhone"
             placeholder="Your Phone Number"
             required
             maxLength={15}
@@ -101,7 +101,7 @@ export default function ContactForm() {
           </div>
         </fieldset>
         <textarea 
-            placeholder="Questions or comments?"
+            placeholder="Questions or comments"
             name="message"
             required
             maxLength={5000}

@@ -21,7 +21,7 @@ export default function Header() {
             >
                 <Link 
                     href="/" 
-                    className="hidden sm:block"
+                    className="hidden sm:block w-fit"
                     onClick={() => {
                         setActiveSection("Home");
                         setTimeOfLastClick(Date.now());

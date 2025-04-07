@@ -1,8 +1,11 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { useSectionInView } from '@/lib/hooks';
+import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
+import { motion } from 'framer-motion';
 
 type ImageProps = {
   imageDirectory: string,
@@ -11,41 +14,61 @@ type ImageProps = {
 
 export default function ImageSlider(props: ImageProps) {
   const { ref } = useSectionInView("Gallery", .01);
-
   const { imageFilenames } = props;
+  const [slideIndex, setSlideIndex] = useState(0);
 
   return (
-    <div ref={ref} className="flex justify-center items-center gap-8 flex-wrap p-6">
+    <div ref={ref} className="flex flex-col h-fit justify-center items-center mt-10 md:mt-6">
       {
         !imageFilenames ? (
           <p className="text-center text-gray-500">Loading images...</p>
         ) : imageFilenames.length === 0 ? (
           <p className="text-center text-gray-500">No images found in the gallery.</p>
         ) :  
-        imageFilenames.map((file: string) => {
-          return (
-            <div key={file}>
-              <SlideItem image={file}  />
+        (
+            <div key={imageFilenames[slideIndex]} className="mb-6">
+              <SlideItem image={imageFilenames[slideIndex]}  />
             </div>
-          )
-        })
+        )
       }
+      <SliderControls setSlideIndex={setSlideIndex} totalSlides={imageFilenames.length} />
     </div>
   )
 }
 
 function SlideItem({ image }: { image: string }) {
   return (
-    <div key={image} className="flex w-[375px] h-[375px] justify-center align-center mb-4">
+    <motion.div 
+      key={image} 
+      className="flex w-[300px] h-[300px] md:w-[475px] md:h-[475px] justify-center align-center mb-4"
+      initial={{ opacity: 0, scale:.9 }}
+      animate={{ opacity: 1, scale: 1}}
+      exit={{ opacity: 0, scale: .9 }}
+    >
       <Image
         src={`/gallery/${image}`} 
         alt={`Gallery image ${image}`}
-        width={350}
-        height={300}
+        width={475}
+        height={475}
         priority
         quality={95}
         className="rounded-lg shadow-lg object-cover"
       />
-    </div>
+    </motion.div>
   ) 
+}
+
+function SliderControls({ setSlideIndex, totalSlides }: { setSlideIndex: React.Dispatch<React.SetStateAction<number>>, totalSlides: number}) {
+  return (
+    <div className="flex justify-between items-center w-full text-4xl ease-in">
+      <IoIosArrowBack 
+        onClick={() => setSlideIndex((prev) => (prev - 1 + totalSlides) % totalSlides)}
+        className="mt-2 hover:scale-115 hover:cursor-pointer" 
+      />
+      <IoIosArrowForward 
+      onClick={() => setSlideIndex((prev) => (prev + 1) % totalSlides)}
+      className="mt-2 hover:scale-115 hover:cursor-pointer" 
+      />
+    </div>
+  )
 }

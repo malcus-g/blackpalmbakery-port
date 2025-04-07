@@ -40,7 +40,7 @@ function SlideItem({ image }: { image: string }) {
   return (
     <motion.div 
       key={image} 
-      className="flex w-[300px] h-[300px] md:w-[475px] md:h-[475px] justify-center align-center mb-4"
+      className="flex w-[300px] h-[300px] md:w-[575px] md:h-[575px] justify-center align-center mb-4"
       initial={{ opacity: 0, scale:.9 }}
       animate={{ opacity: 1, scale: 1}}
       exit={{ opacity: 0, scale: .9 }}
@@ -48,8 +48,8 @@ function SlideItem({ image }: { image: string }) {
       <Image
         src={`/gallery/${image}`} 
         alt={`Gallery image ${image}`}
-        width={475}
-        height={475}
+        width={575}
+        height={575}
         priority
         quality={95}
         className="rounded-lg shadow-lg object-cover"

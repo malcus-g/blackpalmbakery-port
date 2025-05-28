@@ -1,10 +1,15 @@
+'use client';
+
 import Image from "next/image";
 import SectionDivider from "@/ui/layout/section-divider";
+import { useSectionInView } from '@/lib/hooks';
 
 export default function Welcome() {
+  const { ref } = useSectionInView("Home", 0.25);
+
   return (
     <>
-      <div className="flex flex-col items-center text-center">
+      <div className="flex flex-col items-center text-center scroll-mt-28" id="home" ref={ref}>
         {/* Logo Section */}
         <Image
           src="/images/logo.png"

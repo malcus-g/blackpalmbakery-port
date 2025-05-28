@@ -7,12 +7,12 @@ import ContactForm from '@/ui/contact/contact-form';
 import { useSectionInView } from '@/lib/hooks';
 
 export default function Contact() {
-    const { ref } = useSectionInView("Contact", .1);
+    const { ref } = useSectionInView("Contact", .25);
 
     return (
         <section 
             ref={ref}
-            className="flex flex-col justify-center items-center mb-20 sm:mb-28 w-full text-center"
+            className="flex flex-col justify-center items-center mb-20 sm:mb-28 w-full text-center scroll-mt-28"
             id="contact"
         >
             <PageSubHeading>Questions?</PageSubHeading>

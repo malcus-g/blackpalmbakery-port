@@ -21,8 +21,10 @@
 
     body {
         font-family: var(--font-nixie);
-        font-size: 16px;
+        @apply text-[16px] md:text-xl lg:text-2xl text-black/90
     }
+
+
 }
 
 @layer base {

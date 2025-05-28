@@ -8,7 +8,7 @@ export default function Services() {
         <span>Private Events</span> <span className="text-lg">◆</span>
         <span>Birthdays</span>
       </div>
-      <p className="text-gray-700 font-semibold mt-4 md:text-lg">
+      <p className="font-semibold mt-10 mb-10">
         Crafting custom pastries for your special day. Follow us on Instagram
         to see updates and recent work!
       </p>

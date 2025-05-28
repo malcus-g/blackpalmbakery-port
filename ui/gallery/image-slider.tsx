@@ -18,7 +18,7 @@ export default function ImageSlider(props: ImageProps) {
   const [slideIndex, setSlideIndex] = useState(0);
 
   return (
-    <div id="gallery" ref={ref} className="flex flex-col h-fit justify-center items-center scroll-mt-66">
+    <div id="gallery" ref={ref} className="flex flex-col h-fit justify-center items-center mt-12 scroll-mt-66">
       {
         !imageFilenames ? (
           <p className="text-center text-gray-500">Loading images...</p>

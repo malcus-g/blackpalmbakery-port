@@ -16,7 +16,7 @@ export default function Contact() {
             id="contact"
         >
             <PageSubHeading>Questions?</PageSubHeading>
-            <PageHeading>Connect with us!</PageHeading>
+            <PageHeading>Let&apos;s Connect!</PageHeading>
             <SectionDivider/>
             <ContactForm/>
         </section>

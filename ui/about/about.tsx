@@ -4,16 +4,19 @@ import { useRef } from 'react';
 import { useSectionInView } from '@/lib/hooks';
 import { aboutBlurbs } from '@/lib/data';
 import { motion, useScroll, useTransform } from "framer-motion"
+import HeadingDivider from '@/ui/layout/heading-divider';
 
 export default function About() {
   const { ref } = useSectionInView("About", .25);
 
   return (
     <section 
-        className="flex flex-col items-center justify-center max-w-7xl gap-30 p-8 scroll-m-18" 
+        className="flex flex-col items-center justify-center max-w-7xl p-8 scroll-m-18" 
         id="about" 
         ref={ref}
     >
+        <h3 className="mb-8">About us</h3>
+        <HeadingDivider />
         {
             aboutBlurbs.map((blurb: { title: string, body: string[] }, index) => (
                 <Blurb
@@ -39,6 +42,7 @@ function Blurb({ title, body }: { title: string, body: string[] }) {
   return (
     <motion.div
       ref={scrollRef}
+      className="flex flex-col mt-20"
     >
       <motion.h1 
         className="flex mb-14" 

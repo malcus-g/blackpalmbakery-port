@@ -1,5 +1,4 @@
 import React from 'react'
-import { BsQuote } from 'react-icons/bs';
 
 type QuoteProps = {
     quote: string,
@@ -11,9 +10,8 @@ export default function Quote(quoteProps: QuoteProps) {
 
   return (
     <div className="flex flex-col w-[80%] md:w-[65%] items-left justify-center text-left">
-      <BsQuote className="text-xl md:text-3xl text-gray-500 mb-4" />
-      <p className="text-gray-700 italic text-lg md:text-3xl mb-6">
-        {quote}
+      <p className="text-gray-700 italic text-lg md:text-3xl mb-6 border-l-2 border-gray-300 pl-6 py-4 bg-gray-50">
+        {'" ' + quote + ' "'}
       </p>
       <p className="flex justify-end text-gray-500 text-lg">
         -{author}

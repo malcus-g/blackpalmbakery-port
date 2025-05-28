@@ -13,7 +13,7 @@ type ImageProps = {
 }
 
 export default function ImageSlider(props: ImageProps) {
-  const { ref } = useSectionInView("Gallery", .01);
+  const { ref } = useSectionInView("Gallery", .5);
   const { imageFilenames } = props;
   const [slideIndex, setSlideIndex] = useState(0);
 

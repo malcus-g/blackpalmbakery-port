@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import localFont from "next/font/local"
 import { Nixie_One } from "next/font/google";
 import "./globals.css";
-import Container from "@/ui/container";
-import Header from "@/ui/header";
+import Container from "@/ui/layout/container";
+import Header from "@/ui/layout/header";
 import ActiveSectionContextProvider from "@/context/active-section-context";
-import Footer from "@/ui/footer";
+import Footer from "@/ui/layout/footer";
 import { Toaster } from "react-hot-toast";
 
 const nimbus = localFont({

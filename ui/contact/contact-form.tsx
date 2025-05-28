@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import SubmitBtn from '@/ui/contact/submit-btn';
+import SubmitBtn from '@/ui/submit-btn';
 import toast from 'react-hot-toast';
 import { sendEmail } from '@/actions/sendEmail';
 

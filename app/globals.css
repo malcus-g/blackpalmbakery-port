@@ -37,9 +37,8 @@
     }
 
     h3 {
-        font-family: var(--font-dream);
-        font-size: 1.75rem;
-        text-align: center;
+        font-family: var(--font-nixie);
+        @apply text-3xl sm:text-6xl text-center
     }
 }
 

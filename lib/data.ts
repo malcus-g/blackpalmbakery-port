@@ -5,7 +5,7 @@ export const navLinks = [
     },
     {
         name: 'About',
-        path: '/about',
+        path: '#about',
     },
     {
         name: 'Menu',
@@ -13,10 +13,10 @@ export const navLinks = [
     },
     {
         name: 'Gallery',
-        path: '/gallery',
+        path: '#gallery',
     },
     {
         name: 'Contact',
-        path: '/contact',
+        path: '#contact',
     },
 ] as const;

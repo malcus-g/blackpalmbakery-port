@@ -9,7 +9,7 @@ export default function Menu() {
   const { ref } = useSectionInView("Menu", .25);
 
   return (
-    <section id="menu" className="flex flex-col items-center justify-center scroll-mt-16" ref={ref}>
+    <section id="menu" className="flex flex-col items-center justify-center scroll-mt-24" ref={ref}>
         <h3 className="mb-8">Menu</h3>
         <HeadingDivider />
         <Image

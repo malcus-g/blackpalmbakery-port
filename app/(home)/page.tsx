@@ -3,6 +3,7 @@ import Services from "@/ui/home/services";
 import Gallery from "@/ui/gallery/gallery";
 import Contact from "@/ui/contact/contact";
 import About from "@/ui/about/about";
+import Menu from "@/ui/menu/menu";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Welcome />
       <Services />
       <About />
+      <Menu />
       <Gallery />
       <Contact />
     </div>

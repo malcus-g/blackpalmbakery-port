@@ -33,27 +33,31 @@ function Blurb({ title, body }: { title: string, body: string[] }) {
     target: scrollRef,
     offset: ["0 1", "1.33 1"]
   });
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [.85, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [.85, 1]);
+
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [.65, 1]);
 
   return (
     <motion.div
       ref={scrollRef}
     >
       <motion.h1 
-        className="mb-14" 
+        className="flex mb-14" 
         style={{ 
-            scale: scaleProgress,
             opacity: opacityProgress 
         }}
       >
         {title}
       </motion.h1>
-      <ul className="flex flex-col gap-6 md:gap-12">
-        {body.map((item, index) => (
-          <li key={index} className="font-semibold leading-relaxed">{item}</li>
-        ))}
-      </ul>
+      <motion.ul 
+        className="flex flex-col gap-6 md:gap-12"
+        style={{
+          opacity: opacityProgress
+        }}
+      >
+          {body.map((item, index) => (
+            <li key={index} className="font-semibold leading-relaxed">{item}</li>
+          ))}
+      </motion.ul>
     </motion.div>
   );
 }

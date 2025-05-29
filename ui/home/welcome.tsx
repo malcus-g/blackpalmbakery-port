@@ -9,15 +9,17 @@ export default function Welcome() {
 
   return (
     <>
-      <div className="flex flex-col items-center text-center scroll-mt-28" id="home" ref={ref}>
+      <div className="flex flex-col items-center text-center scroll-mt-28 px-4" id="home" ref={ref}>
         {/* Logo Section */}
-        <Image
-          src="/images/logo.png"
-          alt="Home Logo"
-          width={225}
-          height={200}
-          priority
-        />
+        <div className="w-32 h-28 sm:w-[225px] sm:h-[200px] relative">
+          <Image
+            src="/images/logo.png"
+            alt="Home Logo"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
 
         {/* Text Section */}
         <div className="mt-8">

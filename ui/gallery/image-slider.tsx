@@ -40,7 +40,7 @@ function SlideItem({ image }: { image: string }) {
   return (
     <motion.div 
       key={image} 
-      className="flex w-[300px] h-[300px] md:w-[575px] md:h-[575px] justify-center align-center mb-4"
+      className="flex w-[325px] h-[325px] sm:w-[575px] sm:h-[575px] justify-center align-center mb-4 md:mb-8"
       initial={{ opacity: 0, scale:.9 }}
       animate={{ opacity: 1, scale: 1}}
       exit={{ opacity: 0, scale: .9 }}

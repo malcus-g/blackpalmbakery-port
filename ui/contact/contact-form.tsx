@@ -9,7 +9,7 @@ import { sendEmail } from '@/actions/sendEmail';
 export default function ContactForm() {
   return (
     <motion.form
-        className="flex flex-col w-full gap-10 sm:w-[38rem]"
+        className="flex flex-col w-full gap-10 mt-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}

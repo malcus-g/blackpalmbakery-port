@@ -9,8 +9,8 @@ const imageFilenames: string[] = fs.readdirSync(imageDirectory);
 
 export default function Gallery() {
   return (
-    <div className="flex flex-col w-full items-center justify-center gap-8">
-      <h3 className="">Gallery</h3>
+    <div className="flex flex-col w-[90%] items-center justify-center">
+      <h3 className="mb-5 sm:mb-8 md:mb-10">Gallery</h3>
       <HeadingDivider />
       <ImageSlider imageFilenames={imageFilenames} imageDirectory={imageDirectory} />
       <Quote quote="Home is where the heart is. Heart is where cookie is. Math clear: home is cookie." author="Cookie Monster" />

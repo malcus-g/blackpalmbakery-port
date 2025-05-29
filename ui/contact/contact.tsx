@@ -12,7 +12,7 @@ export default function Contact() {
     return (
         <section 
             ref={ref}
-            className="flex flex-col justify-center items-center mb-20 sm:mb-28 w-full text-center scroll-mt-28"
+            className="flex flex-col justify-center items-center w-[95%] max-w-[900px] text-center scroll-mt-28"
             id="contact"
         >
             <PageSubHeading>Questions?</PageSubHeading>

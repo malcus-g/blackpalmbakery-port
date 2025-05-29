@@ -11,11 +11,11 @@ export default function About() {
 
   return (
     <section 
-        className="flex flex-col items-center justify-center max-w-7xl p-8 scroll-m-18" 
+        className="flex flex-col items-center justify-center h-auto w-[95%] max-w-5xl p-8 scroll-m-18" 
         id="about" 
         ref={ref}
     >
-        <h3 className="mb-8">About us</h3>
+        <h3 className="mb-5 sm:mb-8 md:mb-10">About us</h3>
         <HeadingDivider />
         {
             aboutBlurbs.map((blurb: { title: string, body: string[] }, index) => (
@@ -37,15 +37,15 @@ function Blurb({ title, body }: { title: string, body: string[] }) {
     offset: ["0 1", "1.33 1"]
   });
 
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [.65, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [.5, 1]);
 
   return (
     <motion.div
       ref={scrollRef}
-      className="flex flex-col mt-20"
+      className="flex flex-col mt-18 sm:mt-22 md:mt-26"
     >
       <motion.h1 
-        className="flex mb-14" 
+        className="flex mb-8 sm:mb-12 md:mb-14" 
         style={{ 
             opacity: opacityProgress 
         }}

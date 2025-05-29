@@ -8,7 +8,7 @@ import Flyer from "@/ui/flyer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center gap-30 md:gap-40">
+    <div className="flex flex-col items-center justify-center gap-20 sm:gap-30 md:gap-40">
       <Welcome />
       <Services />
       <Flyer />

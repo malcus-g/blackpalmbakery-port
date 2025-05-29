@@ -21,7 +21,7 @@
 
     body {
         font-family: var(--font-nixie);
-        @apply text-[16px] md:text-xl lg:text-2xl text-black/90
+        @apply text-[16px] sm:text-[18px] md:text-xl lg:text-2xl text-black
     }
 
 
@@ -30,17 +30,17 @@
 @layer base {
     h1 {
         font-family: var(--font-nimbus);
-        @apply text-5xl sm:text-7xl text-center 
+        @apply text-4xl sm:text-5xl md:text-6xl text-center
     }
 
     h2 {
         font-family: var(--font-nimbus);
-        @apply text-2xl sm:text-4xl text-center
+        @apply text-2xl sm:text-3xl md:text-4xl text-center
     }
 
     h3 {
         font-family: var(--font-nixie);
-        @apply text-3xl sm:text-6xl text-center
+        @apply text-3xl sm:text-4xl md:text-5xl text-center font-bold
     }
 }
 

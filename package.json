@@ -6,8 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postbuild": "node ./node_modules/@netlify/next/dist/build.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "@netlify/next": "^1.4.9",

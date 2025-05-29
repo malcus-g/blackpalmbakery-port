@@ -9,7 +9,7 @@ export default function Welcome() {
 
   return (
     <>
-      <div className="flex flex-col items-center text-center scroll-mt-28 px-4" id="home" ref={ref}>
+      <div className="flex flex-col items-center text-center px-4" id="home" ref={ref}>
         {/* Logo Section */}
         <div className="w-32 h-28 sm:w-[225px] sm:h-[200px] relative">
           <Image

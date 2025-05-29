@@ -6,9 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "node ./node_modules/@netlify/next/dist/build.js"
   },
   "dependencies": {
+    "@netlify/next": "^1.4.9",
     "@react-email/components": "^0.0.34",
     "@react-email/tailwind": "^1.0.4",
     "clsx": "^2.1.1",
